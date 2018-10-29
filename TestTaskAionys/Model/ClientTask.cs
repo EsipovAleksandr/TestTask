@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TestTaskAionys.Model
 {
@@ -8,8 +9,10 @@ namespace TestTaskAionys.Model
         public string TaskName { get; set; }
         public string Description { get; set; }
         public string ClientAddress { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public int? ClientsId { get; set; }
+
+        public virtual Clients Clients { get; set; }
     }
 }

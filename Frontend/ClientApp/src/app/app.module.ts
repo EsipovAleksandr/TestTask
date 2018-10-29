@@ -1,17 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
-import { AppComponent } from './app.component';
+import { RightBarComponent } from './components/right-bar/right-bar.component';
+import { LeftBarComponent } from './components/left-bar/left-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RightBarComponent,
+    LeftBarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LeftBarComponent,RightBarComponent]
 })
 export class AppModule { }

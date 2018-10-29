@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let symbol of fortsSymbols">
+      <th scope="row">{{symbol.id}}</th>
+      <td>{{symbol.firstName}}</td>
+      <td>{{symbol.lastName}}</td>
+      <td>{{symbol.address}}</td>
+    </tr>
+  </tbody>
+</table>

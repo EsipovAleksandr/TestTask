@@ -1,0 +1,40 @@
+<div class="form-group">
+    <select  (change)="selectChangeHandlerCities($event)" class="form-control">
+      <option  >All cities</option>
+      <option  *ngFor="let symbol of Cities ">{{symbol.clientAddress }}</option>
+    </select>
+    
+    <select (change)="selectChangeHandlerName($event)" class="form-control">
+        <option  >All names</option>
+        <option  *ngFor="let symbolClient of ClientName">{{symbolClient.firstName}}</option>
+      </select>
+  </div>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>TaskName</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>id Client</th>
+      <th>Button</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let symbol of TaskClient; let i=index">
+      <th>{{i+1}}</th>
+      <td>{{symbol.taskName}}</td>
+      <td>{{symbol.description}}</td>
+      <td>{{symbol.clientAddress }}</td>
+      <td>{{symbol.startTime}}</td>
+      <td>{{symbol.endTime}}</td>
+      <td>{{symbol.clientsId}}</td>
+      <td><button  (click)="DeleteTask(symbol.id)" type="button" class=" btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
