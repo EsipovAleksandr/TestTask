@@ -11,8 +11,9 @@ export class RightBarComponent {
 
   Cities: any[];
   ClientName :any[];
-  TaskClient :any[]= new Array();
+  TaskClient :any[];
  
+  C: string[];
 
 
 constructor(private http: Http){
@@ -20,26 +21,35 @@ constructor(private http: Http){
 
        this.Cities = response.json();
        this.TaskClient=response.json();
+      
       });
   http.get('https://testtaskaionys.azurewebsites.net/api/ClientsApi').subscribe(response => {
         this.ClientName = response.json();
-       
         
 });
 }
 
 
+
 selectChangeHandlerCities(cities:any){
+  if(cities.target.value=="All cities"){
+this.Show();
+  }else{
   this.TaskClient=new Array();
   for (let task of this.Cities) {
     if(task.clientAddress==cities.target.value){
     console.log(task);
     this.TaskClient.push(task);
     }
+  
+  }
 }
 }
 
 selectChangeHandlerName(name:any){
+  if(name.target.value=="All names"){
+    this.Show();
+      }else{
   this.TaskClient=new Array();
   for (let client of this.ClientName) {
     if(client.firstName==name.target.value){
@@ -47,10 +57,11 @@ selectChangeHandlerName(name:any){
     if(task.clientsId==client.id){
     console.log(task);
     this.TaskClient.push(task);
+     }
     }
-    }
+   }
   }
-}
+ }
 }
 
 //показать список задач клиетов 

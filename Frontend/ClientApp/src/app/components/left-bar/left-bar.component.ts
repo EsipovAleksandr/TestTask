@@ -10,7 +10,7 @@ export class LeftBarComponent  {
   constructor(http: Http) {
     http.get('https://testtaskaionys.azurewebsites.net/api/ClientsApi').subscribe(response => {
       this.fortsSymbols = response.json();
-      console.log(this.fortsSymbols);
+     // console.log(this.fortsSymbols);
     })
   }
 }
