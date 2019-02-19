@@ -1,4 +1,5 @@
 Task
+
 Implement master\detail application that displays clients and their visits. Following
 technologies should be used:
 • Front end - Angular 2/4
