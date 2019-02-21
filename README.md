@@ -20,3 +20,7 @@ Right side - list of client tasks.
 • End time
 User can filter clients by first name and city (drop down).
 User can delete client tasks
+
+<p align="center">
+  <img src="https://github.com/EsipovAleksandr/ToDoList/blob/master/images.PNG" />
+</p>
