@@ -1,6 +1,5 @@
-Task
-
-Implement master\detail application that displays clients and their visits. Following
+<h1>Task</h1>
+<p>Implement master\detail application that displays clients and their visits. Following
 technologies should be used:
 • Front end - Angular 2/4
 • Back end - .Net Core, Web API.
@@ -20,7 +19,7 @@ Right side - list of client tasks.
 • End time
 User can filter clients by first name and city (drop down).
 User can delete client tasks
-
+</p>
 <p align="center">
   <img src="https://github.com/EsipovAleksandr/ToDoList/blob/master/images.PNG" />
 </p>
